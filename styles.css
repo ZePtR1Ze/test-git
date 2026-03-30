@@ -63,6 +63,16 @@ h2 {
   margin-top: 0;
 }
 
+h3 {
+  font-family: "Cinzel", "Times New Roman", serif;
+  font-size: clamp(0.95rem, 1.6vw, 1.1rem);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 1.25rem 0 0.5rem;
+}
+
 p {
   margin: 0.75rem 0 0;
   color: var(--parchment-dim);
@@ -184,4 +194,118 @@ article::before {
   text-transform: uppercase;
   color: var(--gold-deep);
   margin: 0;
+}
+
+/* Forms */
+.form-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  text-align: left;
+}
+
+.field label {
+  font-family: "Cinzel", serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.field input,
+.field textarea,
+.field select {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1rem;
+  padding: 0.55rem 0.65rem;
+  color: var(--parchment);
+  background: rgba(8, 12, 6, 0.85);
+  border: 1px solid var(--border-subtle);
+  border-radius: 2px;
+}
+
+.field input:focus,
+.field textarea:focus,
+.field select:focus {
+  outline: none;
+  border-color: var(--toxic-deep);
+  box-shadow: 0 0 0 1px var(--toxic-glow);
+}
+
+.field textarea {
+  min-height: 6rem;
+  resize: vertical;
+}
+
+.field-inline {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.field-inline label {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: none;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1rem;
+  margin-top: 0.25rem;
+}
+
+.btn-primary {
+  font-family: "Cinzel", serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 0.65rem 1.4rem;
+  cursor: pointer;
+  color: var(--ink);
+  background: linear-gradient(180deg, var(--toxic-bright), var(--toxic));
+  border: 1px solid var(--toxic-deep);
+  box-shadow: 0 0 20px var(--toxic-glow);
+}
+
+.btn-primary:hover {
+  filter: brightness(1.08);
+}
+
+.btn-primary:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  filter: none;
+}
+
+.form-meta {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-subtle);
+  font-size: 0.95rem;
+}
+
+.form-meta p {
+  margin: 0.4rem 0 0;
+}
+
+.lede {
+  margin: 0 0 0.5rem;
+  color: var(--parchment-dim);
+}
+
+.text-center {
+  text-align: center;
+  margin: 1rem 0;
 }

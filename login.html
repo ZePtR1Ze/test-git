@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Member Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="site-wrap">
+        <header class="site-header">
+            <p class="monogram">Members Only</p>
+            <h1>Sign In</h1>
+            <nav class="site-nav" aria-label="Primary">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="page1.html">About Me</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <article>
+                <h2>Welcome back</h2>
+                <p class="lede">Enter your credentials to access the private ledger.</p>
+                <form class="form-stack" action="login-success.htm" method="get">
+                    <div class="field">
+                        <label for="email">Email address</label>
+                        <input type="email" id="email-address" name="email" autocomplete="username">
+                    </div>
+                    <div class="field">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" autocomplete="current-password">
+                    </div>
+                    <div class="field field-inline">
+                        <input type="checkbox" id="remember" name="remember" checked>
+                        <label for="remember">Remember this device</label>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-primary">Sign in</button>
+                        <a href="forgot.html">Forgot password?</a>
+                    </div>
+                </form>
+                <div class="form-meta">
+                    <p>New here? <a href="register.html">Create an account</a> or return to the <a href="dashbord.html">dashboard</a>.</p>
+                </div>
+            </article>
+        </main>
+
+        <footer class="site-footer">
+            <p><a href="index.html">Back to Home</a></p>
+        </footer>
+    </div>
+</body>
+</html>

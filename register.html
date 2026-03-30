@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Register</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="site-wrap">
+        <header class="site-header">
+            <p class="monogram">Enrolment</p>
+            <h1>Create Account</h1>
+            <nav class="site-nav" aria-label="Primary">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="page1.html">About Me</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <article>
+                <p class="lede">All fields are required unless marked optional.</p>
+                <form class="form-stack" action="register.html" method="post">
+                    <div class="field">
+                        <label for="fullname">Full name</label>
+                        <input type="text" id="fullname" name="fullname" required>
+                    </div>
+                    <h3>Contact &amp; security</h3>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="field">
+                        <label for="email">Phone (optional)</label>
+                        <input type="tel" id="email" name="phone" placeholder="+1 555 000 0000">
+                    </div>
+                    <div class="field">
+                        <label for="pass1">Password</label>
+                        <input type="password" id="pass1" name="password" required minlength="8">
+                    </div>
+                    <div class="field">
+                        <label for="pass2">Confirm password</label>
+                        <input type="password" id="pass2" name="password_confirm_typo" required>
+                    </div>
+                    <div class="field field-inline">
+                        <input type="checkbox" id="terms" name="terms" checked>
+                        <label for="terms">I accept the terms and privacy policy</label>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">Register</button>
+                    </div>
+                </form>
+                <div class="form-meta">
+                    <p>Already registered? <a href="login.html">Sign in</a>.</p>
+                </div>
+            </article>
+        </main>
+
+        <footer class="site-footer">
+            <p><a href="index.html">Back to Home</a></p>
+        </footer>
+    </div>
+</body>
+</html>

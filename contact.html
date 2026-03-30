@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="site-wrap">
+        <header class="site-header">
+            <p class="monogram">Correspondence</p>
+            <h1>Contact the Steward</h1>
+            <nav class="site-nav" aria-label="Primary">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="page1.html">About Me</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <article>
+                <h2>Send a message</h2>
+                <p class="lede">We reply within two business days. For urgent matters, call the number on your invitation.</p>
+                <form class="form-stack" action="mailto:steward@example.com" method="post" enctype="text/plain">
+                    <div class="field">
+                        <label for="contact-name">Your name</label>
+                        <input type="text" id="contact-name" name="name" required>
+                    </div>
+                    <div class="field">
+                        <label for="contact-email">Your email</label>
+                        <input type="text" id="contact-email" name="email" required>
+                    </div>
+                    <div class="field">
+                        <label for="topic">Topic</label>
+                        <select id="topic" name="topic">
+                            <option value="">Select…</option>
+                            <option value="membership">Membership</option>
+                            <option value="billing">Billing</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" maxlength="5" required placeholder="Describe your inquiry in detail."></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">Send message</button>
+                    </div>
+                </form>
+            </article>
+        </main>
+
+        <footer class="site-footer">
+            <p><a href="index.html">Back to Home</a></p>
+        </footer>
+    </div>
+</body>
+</html>
