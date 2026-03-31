@@ -49,6 +49,15 @@
                     <div class="field">
                         <label for="pass1">Password</label>
                         <input type="password" id="pass1" name="password" required minlength="8" pattern="(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*]).{9,}" title="Password must be at least 8 characters and include 1 uppercase letter, 1 number, and 1 special symbol (!@#$%^&*).">
+                        <div class="pw-checklist" aria-live="polite">
+                            <p class="pw-checklist-title">Requirements</p>
+                            <ul>
+                                <li class="pw-item" data-rule="len"><span class="pw-mark">×</span><span>At least 8 characters</span></li>
+                                <li class="pw-item" data-rule="upper"><span class="pw-mark">×</span><span>One uppercase letter (A–Z)</span></li>
+                                <li class="pw-item" data-rule="num"><span class="pw-mark">×</span><span>One number (0–9)</span></li>
+                                <li class="pw-item" data-rule="special"><span class="pw-mark">×</span><span>One special symbol</span></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="field">
                         <label for="pass2">Confirm password</label>
@@ -72,5 +81,38 @@
             <p><a href="index.html">Back to Home</a></p>
         </footer>
     </div>
+    <script>
+        (function () {
+            var pass = document.getElementById("pass1");
+            var list = document.querySelectorAll(".pw-item");
+
+            function setOk(rule, ok) {
+                var item = document.querySelector('.pw-item[data-rule="' + rule + '"]');
+                if (!item) return;
+                if (ok) {
+                    item.classList.add("is-ok");
+                    item.querySelector(".pw-mark").textContent = "✓";
+                } else {
+                    item.classList.remove("is-ok");
+                    item.querySelector(".pw-mark").textContent = "×";
+                }
+            }
+
+            function validate(value) {
+                var v = value || "";
+                setOk("len", v.length >= 8);
+                setOk("upper", /[A-Z]/.test(v));
+                setOk("num", /\d/.test(v));
+                setOk("special", /[^A-Za-z0-9]/.test(v));
+            }
+
+            if (pass) {
+                validate(pass.value);
+                pass.addEventListener("input", function (e) {
+                    validate(e.target.value);
+                });
+            }
+        })();
+    </script>
 </body>
 </html>

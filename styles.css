@@ -244,6 +244,55 @@ article::before {
   resize: vertical;
 }
 
+.pw-checklist {
+  margin: 0.5rem 0 0;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--border-subtle);
+  background: rgba(8, 12, 6, 0.5);
+}
+
+.pw-checklist-title {
+  font-family: "Cinzel", serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  margin: 0 0 0.5rem;
+}
+
+.pw-checklist ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.pw-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+  color: var(--parchment-dim);
+}
+
+.pw-item .pw-mark {
+  width: 1.1rem;
+  display: inline-block;
+  font-family: "Cinzel", serif;
+  color: var(--gold-deep);
+  text-shadow: none;
+}
+
+.pw-item.is-ok {
+  color: var(--toxic);
+  text-shadow: 0 0 12px var(--toxic-glow);
+}
+
+.pw-item.is-ok .pw-mark {
+  color: var(--toxic);
+  text-shadow: 0 0 14px var(--toxic-glow);
+}
+
 .field-inline {
   flex-direction: row;
   align-items: center;
