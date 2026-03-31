@@ -48,7 +48,7 @@
                     </div>
                     <div class="field">
                         <label for="pass1">Password</label>
-                        <input type="password" id="pass1" name="password" required minlength="8">
+                        <input type="password" id="pass1" name="password" required minlength="8" pattern="(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*]).{9,}" title="Password must be at least 8 characters and include 1 uppercase letter, 1 number, and 1 special symbol (!@#$%^&*).">
                     </div>
                     <div class="field">
                         <label for="pass2">Confirm password</label>
